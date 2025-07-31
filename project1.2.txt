@@ -1,0 +1,36 @@
+package project1;
+
+public class User1 {
+	  BankAccount b = new BankAccount("SBI000094321","karthik"); 
+	  void deposit(double amount) {
+		    if(amount>0) {
+		        b.setBalance(b.getBalance() + amount);  
+		        System.out.println("Amount deposited successfully");
+		    } else {
+		        System.out.println("Invalid deposit amount");
+		    }
+      }
+      void getBalance() {
+    	 b.getBalance();
+    	 System.out.println("balance is "+b.getBalance());
+      }
+      void withdraw(double amount, int pin) {
+    	    if(pin != b.getPin()) {
+    	        System.out.println("Incorrect pin");
+    	    } else if(amount > 0 && b.getBalance() >= amount) {
+    	        b.setBalance(b.getBalance() - amount); 
+    	        System.out.println("Withdrawal Successful");
+    	    } else  {
+    	        System.out.println("Insufficient balance");
+    	    }
+    	}
+    	 void checkBalance(int pin) {
+    		 if(pin==b.getPin()) {		 
+    		 System.out.println("your balance is"+b.getBalance());
+    	 }else {
+    		 System.out.println("invalid pin");
+     		
+    	 }
+    	 }
+}
+    	 

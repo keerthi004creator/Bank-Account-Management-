@@ -1,0 +1,14 @@
+package project1;
+
+public class Bank {
+
+	public static void main(String[] args) {
+		User1 u = new User1();
+    u.deposit(500);
+    u.checkBalance(1234);
+    u.withdraw(456, 1234);
+    u.checkBalance(1234);
+	
+	   
+   }
+}
